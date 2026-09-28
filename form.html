@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Form Registrasi</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        fieldset { margin-bottom: 20px; padding: 15px; border: 1px solid #333; }
+        legend { font-weight: bold; font-size: 1.1em; }
+        td { padding: 5px; }
+        input[type="text"], input[type="email"], input[type="password"], textarea { width: 300px; padding: 5px; }
+        .actions { margin-top: 10px; }
+        .actions input { padding: 5px 15px; margin-right: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Form Registrasi</h1>
+    
+    <form action="" method="get">
+        <!-- Fieldset Biodata -->
+        <fieldset>
+            <legend>Biodata</legend>
+            <table>
+                <tr><td>Nama Mahasiswa</td><td>:</td><td><input type="text" name="nama" placeholder="Nama Anda"></td></tr>
+                <tr><td>No Induk Mahasiswa (NIM)</td><td>:</td><td><input type="text" name="nim" placeholder="123456789"></td></tr>
+                <tr><td valign="top">Alamat Mahasiswa</td><td valign="top">:</td><td><textarea name="alamat" rows="4" placeholder="Alamat Anda"></textarea></td></tr>
+                <tr>
+                    <td>Tanggal Lahir</td><td>:</td>
+                    <td>
+                        <select name="tanggal"><option>01</option><option>02</option></select>
+                        <select name="bulan"><option>Januari</option><option>Februari</option></select>
+                        <select name="tahun"><option>1990</option><option>1991</option></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jenis Kelamin</td><td>:</td>
+                    <td>
+                        <input type="radio" name="jk" id="pria" value="pria" checked><label for="pria">Pria</label>
+                        <input type="radio" name="jk" id="wanita" value="wanita"><label for="wanita">Wanita</label>
+                    </td>
+                </tr>
+                <tr><td>Upload Foto</td><td>:</td><td><input type="file" name="foto"></td></tr>
+                <tr><td>URL Website</td><td>:</td><td><input type="text" name="website" placeholder="URL Website Anda"></td></tr>
+                <tr><td>Perguruan Tinggi</td><td>:</td><td><input type="text" name="pt"></td></tr>
+            </table>
+        </fieldset>
+
+        <!-- Fieldset Info Akun -->
+        <fieldset>
+            <legend>Info Akun</legend>
+            <table>
+                <tr><td width="150">Email</td><td>:</td><td><input type="email" name="email" placeholder="Email Anda"></td></tr>
+                <tr><td>Username</td><td>:</td><td><input type="text" name="username" placeholder="Username Anda"></td></tr>
+                <tr><td>Password</td><td>:</td><td><input type="password" name="password" placeholder="Password Anda"></td></tr>
+                <tr><td>Ulangi Password</td><td>:</td><td><input type="password" name="password_conf" placeholder="Password Anda"></td></tr>
+            </table>
+        </fieldset>
+
+        <!-- Fieldset Kemampuan Dasar -->
+        <fieldset>
+            <legend>Kemampuan Dasar</legend>
+            <input type="checkbox" name="skill" id="html"><label for="html">HTML</label>
+            <input type="checkbox" name="skill" id="css"><label for="css">CSS</label>
+            <input type="checkbox" name="skill" id="js"><label for="js">Javascript</label>
+            <input type="checkbox" name="skill" id="php"><label for="php">PHP</label>
+            <input type="checkbox" name="skill" id="mysql"><label for="mysql">MySQL</label>
+            <input type="checkbox" name="skill" id="laravel"><label for="laravel">Laravel</label>
+            <input type="checkbox" name="skill" id="react"><label for="react">React Native</label>
+        </fieldset>
+
+        <!-- Buttons -->
+        <div class="actions">
+            <input type="reset" value="Reset">
+            <input type="submit" value="Simpan">
+            <input type="button" value="Button">
+        </div>
+    </form>
+</body>
+</html>
